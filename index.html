@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Супер змейка 1.0</title>
+
+    <style>
+        body {
+            background-color: #082600;
+        }
+
+        canvas {
+            width: 600px;
+            height: 600px;
+            background-color: #115400;
+            border: 2px solid #1A8000;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .controlls {
+            color: #AFFF99;
+            text-transform: uppercase;
+            font-family: monospace;
+            font-size: 0;
+            font-weight: bold;
+            line-height: auto;
+            text-align: center;
+        }
+        .controlls_item {
+            font-size: 60px;
+            margin: 0;
+            display: inline-block;
+            transition: transform .1s ease;
+        }
+        .controlls_item ~ .controlls_item {
+            margin-left: 10px;
+        }
+        .controlls_item.active {
+            color: #FFEE00;
+            transform: scale(1.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="controlls">
+        <p class="controlls_item key_w">w</p>
+        <p class="controlls_item key_a">a</p>
+        <p class="controlls_item key_s">s</p>
+        <p class="controlls_item key_d">d</p>
+        <p class="controlls_item key_space">space</p>
+    </div>
+    <canvas id="canvas1"></canvas>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
